@@ -1,0 +1,12 @@
+@IsTest
+public class LookupApxControllerTest {
+    @IsTest
+    static void basic(){
+        Contact con = new Contact();
+        con.LastName = 'Test';
+        insert con;
+        LookupApxController.getLookupFieldOnInit('Contact','Name','Id',4,'Name',con.Id);
+        LookupApxController.searchDB('User','Name','Id',4,'Name','ag','');
+        LookupApxController.searchDB('Contact','Name','Id',4,'Name','ag','');
+    }
+}
